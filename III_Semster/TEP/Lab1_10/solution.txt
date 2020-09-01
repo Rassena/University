@@ -1,0 +1,18 @@
+Suppliers: 3
+Factories: 1
+DCs: 4
+Shops: 1
+
+SuppliersMatrix:
+3677.99
+297.689
+402.775
+
+FactoriesMatrix:
+1700.9 848.95 225.568 900.983
+
+DCsMatrix:
+460.027
+848.94
+225.152
+769.998 
