@@ -1,0 +1,19 @@
+h procesow, k stron, z ramek
+
+wszystkie strony są usuwane systemem LRU
+
+trzeba zrobic przydzial proporcjonalny przydzial rowny a takze...
+sterowanie czestoscia bledow strony :/
+(nie mam pojecia co to jest :////)
+
+algorytm strefowy:
+	na poczatek kazdemu przydzielamy systemem równym
+	wyznaczamy ilosc stron sprawdzanych, na tej ilosci liczymy ile 
+	będzie on potrzebował ramek (różnych stron), gdy zabraknie stron
+	procesy bez ramek czekają na zakonczenie pracy poprzednich procesow
+
+podsumowac porownaniem wynikow stron bleow dla poszczegolnch
+trybow usuwania stron i rozdzielania ramek
+
+
+	

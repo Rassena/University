@@ -1,0 +1,14 @@
+ASD/Lab7a
+(Sortowanie2)
+
+1. Zaprojektować  i przeprowadzić  testowanie porównawcze 2  
+	metod sortowania: merge  sort i quick sort.
+   	Testowanie wykonać  na zbiorach danych:
+    - losowym, 
+    - uporządkowanym odwrotnie do porządku sortowania, 
+    - uporządkowanym zgodnie z porządkiem sortowania,
+ a także dla różnych wielkości zbiorów np.:   - 10,  100, 500, 1000,  2000   elementów.
+Do porównania metod wykorzystać  następujące miary:  -  liczba porównań,
+ -  liczba przepisań/zamian (1 zamiana = 3 przepisania!).  Uzyskane wyniki zamieścić w tabelkach i zilustrować graficznie.
+Badania przeprowadzić na  zbiorach  liczb całkowitych. Dane są w tablicach.
+
