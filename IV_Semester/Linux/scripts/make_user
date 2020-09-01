@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#this script makes user with auto generated password and add him to group
+
+
+make_user_script(){
+ password=$(openssl passwd -1 "$(echo $1 |rev)$(echo $(date +%m))")
+ sudo useradd -p $password $1
+ sudo mkdir /home/$1
+ sudo mkdir /home/$1/{Desktop,Downloads,Pictures,Templates,Documents,Music,Public,Videos}
+ if [ $# -eq 2 ]; then 
+  sudo chown -R $1:$2 /home/$1
+  sudo usermod -a -G $2 $1
+ else
+  sudo chown -R $1:$1 /home/$1
+ fi
+}
+
+
+if [ $# -eq 3 ] || [ $# -eq 2 ]; then
+ name="$(echo $1 |iconv -f UTF8 -t US-ASCII//TRANSLIT)" #first leeter must be latin
+ char="$(echo $name |head -c 1)"
+ user=$(echo $char$2 |iconv -f UTF8 -t US-ASCII//TRANSLIT | tr [:upper:] [:lower:])
+ group=$3
+ make_user_script $user $group
+else
+ echo "need 2-3 argumets: name, surname, group(optional)"
+fi
+
+
+

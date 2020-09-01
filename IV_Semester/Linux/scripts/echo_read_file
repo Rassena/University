@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Program to add new user
+# read -r // usuwa widocznosc
+# uruchomic za pomocą sudo
+
+while read line; do
+    for word in $line; do
+        echo "word = '$word'"
+    done
+done

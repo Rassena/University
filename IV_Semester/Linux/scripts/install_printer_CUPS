@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#this script install essencial drivers to cups printer
+#and shows how to add printer
+
+sudo apt update
+sudo apt install cups cups-client
+sudo apt install cups-pdf
+
+sleep 2
+clear
+
+echo "To do in firefox: "
+echo "- login as root"
+echo "- Printers -> add Printer"
+echo "- Select 'Virual PDF Printer (CUPS-PDF)' or CUPS-PDF (Virtual PDF Printer)"
+echo "- Location <- 'Local Printer'"
+echo "- MAKE -> Generic"
+echo "- Model -> CUPS-PDF (no options)"
+
+sleep 5
+
+firefox http://localhost:631/admin
+
+
+
+
+

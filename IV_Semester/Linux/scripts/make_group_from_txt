@@ -1,0 +1,12 @@
+#!/bin/bash
+
+filename=$1
+group="${filename//.txt$''}"
+sudo addgroup "$group"
+
+while read line; do
+		string="${line//,/$' '}"
+		set -- $string
+		bash /home/stud/Documents/Lab5/make_user_1 "$1" "$2"
+		sudo adduser "$1" "$group"
+done < $filename

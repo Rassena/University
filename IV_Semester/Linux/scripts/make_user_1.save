@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Program to add new user
+# read -r // usuwa widocznosc
+# uruchomic za pomocą sudo
+
+sudo useradd -p $(openssl passwd -1 $2) $1
+
+cd /home/
+mkdir $1
+cd /home/$1
+mkdir Deskop, Download, Picture, Templates, Documens, Music, Public, Video
+
+chown -R "$user:$user" Deskop, Download, Picture, Templates, Documens, Music, Public, Video
